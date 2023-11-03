@@ -1,5 +1,5 @@
-/*Calculating Average: Write a program that reads a sequence of positive doubles into 
-an array (-1 to finish) and outputs the array that was read along with the average*/
+/*Name:Uche Hadassah
+This program reads positive numbers into the array and outputs the average*/
 #include<iostream>
 using namespace std;
 int main()
@@ -12,19 +12,19 @@ int main()
 	do
 	{
 		cin >> Array[counter];
-		if (Array[counter] < -1)
+		if (Array[counter] < -1)//Incase the user enters a negative number
 		{
 			cout << "Invalid number. Enter a POSITIVE number:";
 			cin >> Array[counter];
 		}
-		else if (Array[counter] == -1)
+		else if (Array[counter] == -1)//When the sentinel is entered
 		{
 			break;
 		}
 		else
 		{
 			sum += Array[counter];
-			counter++;
+			counter++;//increment the counter
 		}
 	} while (Array[counter] != -1 && Array[counter] < MAX);
 	double Average = sum / counter;
