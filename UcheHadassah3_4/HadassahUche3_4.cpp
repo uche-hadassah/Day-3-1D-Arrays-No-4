@@ -7,7 +7,6 @@ int main()
 	const int MAX = 100;
 	double Array[MAX];
 	double sum = 0.0;
-	double Average;
 	int counter = 0;
 	cout << "Enter a number(-1 to end):";
 	do
@@ -22,9 +21,13 @@ int main()
 		{
 			break;
 		}
-		sum += Array[counter];
-	} while (Array[counter] != -1 && Array[counter] > -1);
-	Average = sum / counter;
+		else
+		{
+			sum += Array[counter];
+			counter++;
+		}
+	} while (Array[counter] != -1 && Array[counter] < MAX);
+	double Average = sum / counter;
 	cout << "The average of the numbers you entered is:" << Average;
 	return 0;
 }
